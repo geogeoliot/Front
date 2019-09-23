@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>articleDetails</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="new">
+
+  <ion-card>
+    
+    <ion-card-title>
+     {{ new[0].title }}
+     
+    </ion-card-title>
+    <ion-card-subtitle>
+      {{ new[0].id }}
+    </ion-card-subtitle>
+  </ion-card>
+
+
+    <ion-button [routerLink]="['/article']">Retourà la page précédente </ion-button>
+    <ion-button [routerLink]="['/article/update', new[0].id]">Modifié le titre de l'article</ion-button>
+
+</ion-content>

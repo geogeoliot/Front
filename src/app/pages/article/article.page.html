@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>article</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div *ngIf="error">
+  <p>Erreur</p>
+</div>
+
+<ion-content *ngFor="let article of news">
+
+  <ion-card>
+
+    <ion-card-title>
+      <ion-button expand="full" [routerLink]="['/article-details', article.id]">
+        {{ article.title }}
+      </ion-button>
+    </ion-card-title>
+  </ion-card>
+
+</ion-content>

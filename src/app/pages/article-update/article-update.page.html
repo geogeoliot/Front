@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>article-update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="new">
+  <form [formGroup]="updateForm">
+    <ion-item>
+           <ion-input formControlName="title" placeholder="{{new[0].title}}"></ion-input>
+    </ion-item>
+    <ion-button (click)="setTitle()" shape="round" size="default" color="primary" expand="block">Save the new Title !</ion-button>
+  </form>
+    
+</ion-content>
